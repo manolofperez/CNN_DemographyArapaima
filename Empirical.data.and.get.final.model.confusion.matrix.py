@@ -1,3 +1,8 @@
+#Script modified from Flagel et al. (2019) 
+#Lex Flagel, Yaniv Brandvain, Daniel R Schrider, The Unreasonable Effectiveness of 
+#Convolutional Neural Networks in Population Genetic Inference, Molecular Biology and 
+#Evolution, Volume 36, Issue 2, February 2019, Pages 220–238, https://doi.org/10.1093/molbev/msy224
+
 import io
 import numpy as np
 from random import shuffle
@@ -29,7 +34,6 @@ for i in range(0,num_samples):
 y = [0 for i in xrange(100)]
 y.extend([1 for i in xrange(100)])
 y.extend([2 for i in xrange(100)])
-#y.extend([3 for i in xrange(100)])
 x = np.array(mig)
 
 print len(x), len(y)

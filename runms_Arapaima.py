@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
-## Code that simulate genetic data for Perez et al. (2018) Arapaima...
+## Code that simulate genetic data for Oliveira et al. (2019) Effects of projected climate 
+#change on the genetic diversity and historical demography in a widespread Neotropical
+#freshwater species with high economic importance.
 
 ## in order to use this code you have to have ms installed on your computer
 ## ms can be freely downloaded from:
@@ -43,7 +45,7 @@ def ms2nparray(xfile):
 ### variable declarations
 
 #define the number of simulations
-Priorsize = 2000
+Priorsize = 20000
 
 ## nDNA sample size of Pop_Am.
 nDNAPop1 = 48

@@ -1,3 +1,8 @@
+#Script modified from Flagel et al. (2019) 
+#Lex Flagel, Yaniv Brandvain, Daniel R Schrider, The Unreasonable Effectiveness of 
+#Convolutional Neural Networks in Population Genetic Inference, Molecular Biology and 
+#Evolution, Volume 36, Issue 2, February 2019, Pages 220–238, https://doi.org/10.1093/molbev/msy224
+
 import numpy as np
 import tensorflow as tf
 from random import shuffle
@@ -7,14 +12,13 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 
 u1 = np.load("simModel1.npz")
-#u2 = np.load("simModel2.npz")
-u3 = np.load("simModel3.npz")
-u4 = np.load("simModel4.npz")
-x=np.concatenate((u1['simModel1'],u3['simModel3'],u4['simModel4']),axis=0)
+u3 = np.load("simModel2.npz")
+u4 = np.load("simModel3.npz")
+x=np.concatenate((u1['simModel1'],u3['simModel2'],u4['simModel3']),axis=0)
 
 y=[0 for i in xrange(len(u1['simModel1']))]
-y.extend([1 for i in xrange(len(u3['simModel3']))])
-y.extend([2 for i in xrange(len(u4['simModel4']))])
+y.extend([1 for i in xrange(len(u3['simModel2']))])
+y.extend([2 for i in xrange(len(u4['simModel3']))])
 
 
 

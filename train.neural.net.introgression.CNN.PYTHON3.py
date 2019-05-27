@@ -1,3 +1,8 @@
+#Script modified from Flagel et al. (2019) 
+#Lex Flagel, Yaniv Brandvain, Daniel R Schrider, The Unreasonable Effectiveness of 
+#Convolutional Neural Networks in Population Genetic Inference, Molecular Biology and 
+#Evolution, Volume 36, Issue 2, February 2019, Pages 220–238, https://doi.org/10.1093/molbev/msy224
+
 import numpy as np
 import keras
 from keras.datasets import mnist
@@ -13,10 +18,9 @@ epochs = 20
 num_classes = 3
 
 u1 = np.load("trainingSims/simModel1.npz")
-#u2 = np.load("simModel2.npz")
-u3 = np.load("trainingSims/simModel3.npz")
-u4 = np.load("trainingSims/simModel4.npz")
-x=np.concatenate((u1['simModel1'],u3['simModel3'],u4['simModel4']),axis=0)
+u3 = np.load("trainingSims/simModel2.npz")
+u4 = np.load("trainingSims/simModel3.npz")
+x=np.concatenate((u1['simModel1'],u3['simModel2'],u4['simModel3']),axis=0)
 
 y=[0 for i in xrange(20000)]
 y.extend([1 for i in xrange(20000)])
@@ -54,21 +58,12 @@ model.add(Dropout(0.75))
 model.add(Dense(num_classes, activation='sigmoid'))
 model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adam(),# lr=0.001 -> loss 0.7170 and acc 0.6840 after 20 epochs
-#              optimizer=keras.optimizers.Adam(),# lr=0.001 -> loss 0.7170 and acc 0.6840 after 20 epochs
               metrics=['accuracy'])
 print(model.summary())
 model.fit(xtrain, ytrain, batch_size=batch_size,
           epochs=epochs,
           verbose=1,
           validation_data=(xtest, ytest))
-#https://stackoverflow.com/questions/41799692/any-way-to-optimize-large-inputs-memory-usage-in-keras
-#def train_generator():
-#    while True:
-#        chunk = read_next_chunk_of_data()
-#        x,y = extract_training_data_from_chunk(chunk)
-#        yield (x,y)
-
- #model.fit_generator(generator=train_generator())
 
 
 model.save(filepath='big.data.89.2.acc.mod')
