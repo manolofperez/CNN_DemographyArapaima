@@ -29,7 +29,7 @@ def ms2nparray(xfile):
     k = [idx for idx,i in enumerate(g) if len(i) > 0 and i.startswith('//')]
     f = []
     for i in k:
-        L = g[i+4:i+110]
+        L = g[i+4:i+nDNANsam+4]
         q = []
         for i in L:
             i = [int(j) for j in list(i[0])]
