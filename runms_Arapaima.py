@@ -1,9 +1,10 @@
 #!/usr/bin/python
 
-## Code that simulate genetic data for Oliveira et al. (2019) Effects of projected climate
-#change on the genetic diversity and historical demography in a widespread Neotropical
-#freshwater species with high economic importance.
+##Code by Manolo Perez
 
+## Code that simulate genetic data for Oliveira et al. (2020) 
+## Historical demography and climate driven distributional changes 
+## in a widespread Neotropical freshwater species with high economic importance.
 ## in order to use this code you have to have ms installed on your computer
 ## ms can be freely downloaded from:
 ## http://home.uchicago.edu/rhudson1/source/mksamples.html
