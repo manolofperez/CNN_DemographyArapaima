@@ -1,3 +1,10 @@
+# Code from Oliveira et al. (2020)
+# Historical demography and climate driven distributional changes in a  
+# widespread Neotropical freshwater species with high economic importance.
+
+#Script by Manolo Perez
+#Loads SNP data as images and uses to train a Convolution Neural Network
+
 #Script modified from Flagel et al. (2019) 
 #Lex Flagel, Yaniv Brandvain, Daniel R Schrider, The Unreasonable Effectiveness of 
 #Convolutional Neural Networks in Population Genetic Inference, Molecular Biology and 

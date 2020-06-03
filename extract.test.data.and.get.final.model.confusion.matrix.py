@@ -1,4 +1,11 @@
-#Script modified from Flagel et al. (2019) 
+# Code from Oliveira et al. (2020)
+# Historical demography and climate driven distributional changes in a  
+# widespread Neotropical freshwater species with high economic importance.
+
+#Script by Manolo Perez
+#Loads SNP test data as images and uses to build a confusion matrix based on a trained Convolution Neural Network
+
+#modified from Flagel et al. (2019) 
 #Lex Flagel, Yaniv Brandvain, Daniel R Schrider, The Unreasonable Effectiveness of 
 #Convolutional Neural Networks in Population Genetic Inference, Molecular Biology and 
 #Evolution, Volume 36, Issue 2, February 2019, Pages 220–238, https://doi.org/10.1093/molbev/msy224
